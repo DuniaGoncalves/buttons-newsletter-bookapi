@@ -1,8 +1,7 @@
 /* Image of the newsletter component for reference. Please don't remove. */
-body {
+.newsletter-image {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/273280/newsletter-new.png) no-repeat calc(100% - 10px) 10px;
-  margin: 0;
-  padding: 10px;
+  height: 20rem;
 }
 
 /*
@@ -14,7 +13,37 @@ body {
 
 */
 
+/* BUTTONS */
+.button-group {
+  margin: 10rem auto;
+  text-align: center;
+}
 
+.button-group button {
+  border-radius: 0.2rem; 
+  height: 3rem;
+  margin: 1rem;
+  width: 10rem;
+}
+
+.accept {
+  background-color: #095cda;
+  border: none;
+  color: #FFF;
+}
+
+.cancel {
+  background-color:#FFF;
+  border: 2px solid #095cda;
+  color: #095cda;
+}
+
+/* This is the simplist to lighten the color on hover for now */
+.button-group button:hover {
+  background-color: #64a0f9;
+  border: none;
+  color: #FFF;
+}
 
 
 
