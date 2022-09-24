@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
@@ -50,24 +51,28 @@
 
   -->
     <section class="newsletter">
-      <h2>FREE EMAIL NEWSLETTER</h2>
+      <h2>Free email newsletter</h2>
       <p>Let About.com send you the latest from our Neurology Expert</p>
       <form action="submit">
-        <input type="checkbox" name="treatment">
-        <label for="treatment">Treatment Options</label>
-        <input type="checkbox" name="special">
-        <label for="special">Specialty Information</label>
-        <input type="email" name="email" placeholder="Your email address">
         <div>
-          <button>SIGN UP</button>
+          <label for="treatment">Treatment Options</label>
+          <input type="checkbox" name="treatment">
         </div>
+        <div>
+          <label for="special">Specialty Information</label>
+          <input type="checkbox" name="special">
+        </div>
+        <input type="email" name="email" placeholder="Your email address">
+        <button type="button"><i class="fa fa-star"></i>SIGN UP<i class="fa fa-star"></i></button>
       </form>
     </section>
     <div class="newsletter-image"></div>
 
   <!-- Book Listing Exercise
 The purpose of this exercise is to explore your comfort building an output interface while working with a 3rd-party API. Specifically, you'll be building a small book listing webapp using either vanilla HTML/CSS/JS or your front-end framework of choice, leveraging the Goodreads Public APIs using the account credentials below:
-
+Key: RDfV4oPehM6jNhxfNQzzQ
+Secret: fu8fQ5oGQEDlwiICw45dGSuxiu13STyIrxY0Rb6ibI
+Please fork the following CodePen to get started: https://codepen.io/dotdash/pen/eEwwRZ
 
 
 Your application should be composed of a simple search box that upon enter or click of the "Search" button, triggers a search using a (provided) REST endpoint which proxies Goodreads' public APIs, transforms it into JSON, and adds CORS headers for client-side use. The results of the API call should be displayed in your app.
