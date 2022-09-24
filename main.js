@@ -28,10 +28,12 @@ async function apiRequest() {
 
     bookArray.forEach(function (book) {
       bookInfo.innerHTML += `
-        <div class="book">
-          <img src="${book.imageUrl}" />                                    
-          <h6>${book.title}</h6>
-          <p>${book.authorName}</p>
+        <div class="book-group">
+          <div class="book">
+            <img src="${book.imageUrl}" />                                    
+            <h6>${book.title}</h6>
+            <p>${book.authorName}</p>
+          </div>
         </div>`;
     });
   } catch (error) {

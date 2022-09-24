@@ -130,4 +130,24 @@
   margin: 0 1rem;
 }
 
+/* Book */
+.book-info {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.book-group {
+  padding: 1rem;
+  text-align: center;
+  width: 15%;
+}
+
+.book h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.book p {
+  font-size: 1rem;
+  margin: 0;
+}
