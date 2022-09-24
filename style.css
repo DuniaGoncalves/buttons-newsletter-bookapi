@@ -55,7 +55,12 @@
   line-height: 10rem;
   padding: 2rem;
   text-align: center;
-  width: 20rem;
+  width: 20rem;  
+}
+
+.hide {
+  position: absolute;
+  right: -9999px;
 }
 
 
