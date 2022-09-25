@@ -2,13 +2,30 @@
 // const apiUrl = `https://goodreads-server-express--dotdash.repl.co/search/${term}`;
 
 //TODO: create sliding effect in CSS? and use set timeout to create the 8sec delay before disappearing
-const popUpThanks = document.querySelector(".thanks-pu");
-const popUpCB = document.querySelector(".come-back-pu");
-const thanksButton = document.querySelector(".accept");
-const comeBackButton = document.querySelector(".cancel");
+// TODO: click out of elemnt to slide out divs
+const popUpThanks = document.querySelector('.thanks-pu');
+const popUpCB = document.querySelector('.come-back-pu');
+const thanksButton = document.querySelector('.accept');
+const comeBackButton = document.querySelector('.cancel');
 
-thanksButton.addEventListener("click", () => popUpThanks.classList.toggle("hide"));
-comeBackButton.addEventListener("click", () => popUpCB.classList.toggle("hide"));
+thanksButton.addEventListener('click', () => {
+  popUpThanks.classList.add('slide-in');
+  setTimeout(() => {
+    popUpThanks.classList.add('slide-out');
+    popUpThanks.classList.remove('slide-in');
+  }, 8000);
+  popUpThanks.classList.remove('slide-out');
+});
+
+comeBackButton.addEventListener('click', () => {
+  popUpCB.classList.add('slide-in');
+  setTimeout(() => {
+    popUpCB.classList.add('slide-out');
+    popUpCB.classList.remove('slide-in');
+  }, 2000);
+
+  popUpCB.classList.remove('slide-out');
+});
 
 
 // BOOK API
@@ -28,9 +45,9 @@ async function apiRequest() {
 
     bookArray.forEach(function (book) {
       bookInfo.innerHTML += `
-        <div class="book-group">
-          <div class="book">
-            <img src="${book.imageUrl}" />                                    
+        <div class='book-group'>
+          <div class='book'>
+            <img src='${book.imageUrl}' />                                    
             <h6>${book.title}</h6>
             <p>${book.authorName}</p>
           </div>

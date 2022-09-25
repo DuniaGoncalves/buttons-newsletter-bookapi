@@ -41,11 +41,27 @@
   padding: 2rem;
   text-align: center;
   width: 20rem;  
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+  margin-left: -60rem;
 }
 
-.hide {
-  position: absolute;
-  right: -9999px;
+.slide-in {
+  animation-name: slideIn;
+}
+
+.slide-out{
+  animation-name: slideOut;
+}
+
+@keyframes slideIn {
+  from { margin-left: -60rem;}
+  to { margin-left: 1rem;}      
+}
+
+@keyframes slideOut {
+  from { margin-left: 1rem;}
+  to { margin-left: -60rem;}  
 }
 
 /* Image of the newsletter component for reference. Please don't remove. */
